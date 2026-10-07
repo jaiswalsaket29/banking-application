@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: banking-project
+  datasource:
+    url: jdbc:postgresql://localhost:5433/banking
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+  config:
+    import: optional:file:.env[.properties]
